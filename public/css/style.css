@@ -1,0 +1,73 @@
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.lenguageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.lenguage {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #ff0400;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.lenguage:hover {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #bc1916;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+#weather-info {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <h1>Aplicación del clima</h1>
+
+  <form action="/weather" method="GET">
+    <label for="location">Ingresa localización:</label>
+    <input type="text" id="location" name="location" required>
+    <button type="submit">Obtener clima</button>
+  </form>
+
+  <div id="weather-info"></div>
+
+  <script>
+    const form = document.querySelector('form');
+    const weatherInfo = document.getElementById('weather-info');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const location = document.getElementById('location').value;
+      console.log(location);
+      const response = await fetch(`/request?location=${location}`);
+      const data = await response.json();
+      
+      if (data.error) {
+        weatherInfo.textContent = `Error: ${data.error}`;
+      } else {
+        const country = data.location.country;
+        const region = data.location.region;
+        const temperature = data.current.temperature;
+        const description = data.current.weather_descriptions[0];
+        const weatherIcons = data.current.weather_icons;
+
+        let iconHtml = '';
+        // Create HTML for weather icons
+        if (weatherIcons && weatherIcons.length > 0) {
+          iconHtml = weatherIcons.map(iconUrl => `<img src="${iconUrl}" alt="Weather Icon" />`).join('');
+        }
+        weatherInfo.innerHTML = 
+                    `Country: ${country} <br><br>
+                     Region: ${region} <br><br>
+                     Temperature: ${temperature}°C <br><br> 
+                     Description: ${description} <br><br>
+                     ${iconHtml}`;
+      }
+    });
+  </script>
+</body>
+
+
+</html>
