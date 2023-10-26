@@ -36,7 +36,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0ecd9a;
 }
 
 .lenguageDiv {
@@ -58,7 +58,7 @@ button:hover {
 .lenguage:hover {
   padding: 8px 20px;
   font-size: 16px;
-  background-color: #0ecd9a;
+  background-color: #bc1916;
   color: #fff;
   border: none;
   cursor: pointer;
