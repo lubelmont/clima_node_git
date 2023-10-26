@@ -44,11 +44,13 @@
           iconHtml = weatherIcons.map(iconUrl => `<img src="${iconUrl}" alt="Weather Icon" />`).join('');
         }
         weatherInfo.innerHTML = 
-                    `Country: ${country} <br><br>
-                     Region: ${region} <br><br>
-                     Temperature: ${temperature}°C <br><br> 
-                     Description: ${description} <br><br>
-                     ${iconHtml}`;
+                    `
+                    Country: ${country} <br><br>
+                    Region: ${region} <br><br>
+                    Temperature: ${temperature}°C <br><br> 
+                    ${iconHtml} <br><br>
+                    Description: ${description} <br><br>
+                     `;
       }
     });
   </script>
