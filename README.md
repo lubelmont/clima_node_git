@@ -3,6 +3,15 @@
 
 Proyecto de ejemplo en el uso de GitHub
 
+## Install project
+
+To start the project run:
+
+```bash
+  npm install
+```
+
+
 
 ## Start project
 
